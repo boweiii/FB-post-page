@@ -1,0 +1,457 @@
+/* * {
+  outline: 1px solid;
+} */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e9ebee;
+  font-family: "Microsoft Jhenghei", sans-serif;
+}
+#app {
+  width: 500px;
+  padding-bottom: 12px;
+  background-color: white;
+  border: 1px solid #dddfe2;
+  border-radius: 4px;
+}
+/* ***************************************header******************************************* */
+#app .header {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 12px 0;
+}
+#app .header .left-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#app .header .left-info .thumbnail img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+#app .header .left-info .name-info .name a {
+  cursor: pointer;
+  font-weight: bolder;
+  text-decoration: none;
+  color: #365899;
+}
+#app .header .left-info .name-info .name a:hover {
+  text-decoration: underline;
+}
+#app .header .left-info .name-info .time {
+  color: 616770;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#app .header .left-info .name-info .time .global-icon {
+  width: 12px;
+  height: 12px;
+  background-image: url("./img/css sprite.png");
+  background-position: -28px -499px;
+  background-size: 73px 540px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin-left: 4px;
+}
+#app .header .right-info {
+  background-image: url("./img/css sprite2.png");
+  background-repeat: no-repeat;
+  background-size: 500px 287px;
+  background-position: -242px -245px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+/* *********************************content************************************************ */
+#app .content {
+  font-size: 25px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 28px;
+  margin: 12px 12px 7px;
+}
+#app .video-link {
+  text-decoration: none;
+}
+.video-link .video-wrapper {
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  background-color: #f2f3f5;
+  width: 500px;
+  height: 139px;
+  cursor: pointer;
+}
+.video-link .video-wrapper .video-thumbnail img {
+  width: 139px;
+  height: 139px;
+  /* display: block; */
+}
+#app .video-link .video-wrapper .video-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 12px;
+  border-top: 1px solid #dddfe2;
+  border-bottom: 1px solid #dddfe2;
+}
+#app .video-link .video-wrapper .video-description .youtube-title {
+  color: #606770;
+  font-size: 13px;
+  line-height: 16px;
+}
+#app .video-link .video-wrapper .video-description .video-title {
+  color: #1d2129;
+  font-weight: bolder;
+  font-size: 17px;
+  line-height: 20px;
+  padding-top: 2px;
+}
+#app .video-link .video-wrapper .video-description .video-desc {
+  color: #606770;
+  font-size: 15px;
+  line-height: 20px;
+  margin-top: 3px;
+  max-height: 40px;
+  width: 330px;
+  /* 補上底下的 css */
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+}
+/* ***********************************Feedback******************************************** */
+#app .feedback-info {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #dadde1;
+  padding: 10px 0;
+  margin: 0 12px;
+}
+#app .feedback-info .feedback-emojis {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  min-width: 100px;
+}
+#app .feedback-info .threads-and-share {
+  font-size: 14px;
+}
+#app .feedback-info .feedback-emojis .icons.like-icon {
+  background-image: url("./img/css sprite3.png");
+  background-repeat: no-repeat;
+  background-size: 49px 660px;
+  height: 16px;
+  width: 16px;
+  /* line-height: 16px; */
+  margin-left: -2px;
+  margin-right: 4px;
+  background-position: 0 -526px;
+}
+/****************************************feedback-action********************************** */
+#app .feedback-action {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: 600;
+  font-size: 14px;
+  height: 32px;
+  color: #606770;
+  margin: 0 12px;
+  /* min-height: 32px; */
+  padding: 4px 0;
+}
+/* #app .feedback-action * {
+  outline: 1px solid black;
+} */
+#app .feedback-action .fb-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 32px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+#app .feedback-action .fb-wrapper:hover {
+  background-color: rgba(29, 33, 41, 0.04);
+  text-decoration: none;
+}
+#app .feedback-action .fb-wrapper .fb-icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  margin: 0 6px 0 0;
+}
+#app .feedback-action .fb-wrapper .fb-icon.thumb-up {
+  font-size: 18px;
+}
+#app .feedback-action .fb-wrapper .fb-icon.response {
+  background-image: url("./img/css sprite4.png");
+  background-size: 161px 376px;
+  background-position: -42px -249px;
+}
+#app .feedback-action .fb-wrapper .fb-icon.share {
+  background-image: url("./img/css sprite4.png");
+  background-size: 161px 376px;
+  background-position: -61px -249px;
+}
+/**************************************comment********************************** */
+#app .comments {
+  margin: 0 12px;
+  border-top: 1px solid #dadde1;
+}
+/* .my-comment-wrapper * {
+  outline: 1px solid black;
+} */
+#app .my-comment-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+#app .my-comment-wrapper .my-avatar img {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  display: block;
+  margin-right: 6px;
+}
+#app .my-comment-wrapper .my-comment {
+  background-color: #f2f3f5;
+  border: 1px solid #ccd0d5;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  cursor: text;
+  width: 100%;
+  /* flex: 1 1 auto; */
+  line-height: 16px;
+  padding: 7px 12px;
+}
+#app .my-comment-wrapper .my-comment input[type="text"] {
+  width: 410px;
+  outline: none;
+  border: 0px solid transparent;
+  background: transparent;
+  font-size: 14px;
+}
+#app .people-comment-wrapper {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+#app .people-comment-wrapper .people-avatar img {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  display: block;
+  margin-right: 6px;
+}
+#app .people-comment-wrapper .people-comment {
+  background-color: #f2f3f5;
+  border-radius: 18px;
+  color: #1c1e21;
+  line-height: 16px;
+  padding: 8px 12px;
+  position: relative;
+}
+#app .people-comment-wrapper .people-comment .people-comment-container {
+  display: flex;
+  color: #1c1e21;
+  font-size: 14px;
+}
+#app
+  .people-comment-wrapper
+  .people-comment
+  .people-comment-container
+  .people-name {
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 4px;
+  display: flex;
+  align-items: center;
+}
+#app
+  .people-comment-wrapper
+  .people-comment
+  .people-comment-container
+  .people-name
+  a {
+  text-decoration: none;
+  color: #365899;
+}
+#app
+  .people-comment-wrapper
+  .people-comment
+  .people-comment-container
+  .people-name:hover {
+  text-decoration: underline;
+}
+
+#app
+  .people-comment-wrapper
+  .people-comment
+  .people-comment-container
+  .people-name
+  .blue-check {
+  margin-left: 4px;
+  background-image: url("./img/css sprite5.png");
+  background-repeat: no-repeat;
+  background-size: 28px 195px;
+  background-position: 0 -165px;
+  height: 15px;
+  /* vertical-align: -2px; */
+  width: 15px;
+  display: inline-block;
+}
+#app .people-comment-wrapper .people-comment .comment-reactions {
+  position: absolute;
+  bottom: 4px;
+  right: -25px;
+  /* z-index: 9999; 數字越大離眼睛越近 */
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  color: #8d949e;
+  font-size: 12px;
+  /* font-weight: normal; */
+  padding: 2px 1px 2px 4px;
+}
+#app
+  .people-comment-wrapper
+  .people-comment
+  .comment-reactions
+  .icons.like-icon {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background-image: url("./img/css sprite6.png");
+  background-repeat: no-repeat;
+  background-size: 49px 660px;
+  background-position: 0 -526px;
+
+  /* background: #fff; */
+  border-radius: 12px;
+  box-shadow: 2px 0 white;
+  /* overflow: hidden; */
+  cursor: pointer;
+  line-height: 16px;
+  margin-left: -2px;
+  margin-right: 2px;
+}
+#app .people-comment-wrapper .people-comment .comment-reactions .number {
+  color: #777d88;
+  padding: 0 3px 0 2px;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: "Open Sans", sans-serif;
+}
+#app .like-and-response-wrapper {
+  display: flex;
+  color: #90949c;
+  font-size: 13px;
+  line-height: 13px;
+  margin-top: 5px;
+  margin-left: 50px;
+}
+#app .like-and-response-wrapper .tiny-dot {
+  margin-left: 2px;
+  margin-right: 4px;
+  color: #8d949e;
+}
+#app .like-and-response-wrapper .like-comment {
+  color: #365899;
+  cursor: pointer;
+}
+/* 胡瓜 */
+.who-gua {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 12px;
+}
+.who-gua .whogua-avatar img {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  display: block;
+  margin-right: 6px;
+}
+.whogua-comment {
+  background-color: #f2f3f5;
+  border-radius: 18px;
+  color: #1c1e21;
+  line-height: 20px;
+  padding: 8px 12px;
+  position: relative;
+  font-size: 14px;
+}
+.whogua-post-img img {
+  width: 350px;
+  display: block;
+}
+.whogua-name {
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.whogua-name a {
+  text-decoration: none;
+  color: #365899;
+}
+.whogua-name .blue-check {
+  margin-left: 4px;
+  background-image: url("./img/css sprite5.png");
+  background-repeat: no-repeat;
+  background-size: 28px 195px;
+  background-position: 0 -165px;
+  height: 15px;
+  /* vertical-align: -2px; */
+  width: 15px;
+  display: inline-block;
+}
+.whogua-comment-reaction {
+  position: absolute;
+  right: -30px;
+  bottom: 4px;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  color: #8d949e;
+  font-size: 12px;
+  /* font-weight: normal; */
+  padding: 1px 1px 1px 4px;
+}
+.whogua-comment-reaction .icons.like-icon {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background-image: url("./img/css sprite6.png");
+  background-repeat: no-repeat;
+  background-size: 49px 660px;
+  background-position: 0 -526px;
+
+  /* background: #fff; */
+  border-radius: 12px;
+  box-shadow: 2px 0 white;
+  /* overflow: hidden; */
+  cursor: pointer;
+  line-height: 16px;
+  margin-left: -2px;
+  margin-right: 2px;
+}
+.whogua-comment-reaction .number {
+  padding: 0 3px 0 2px;
+  font-family: "Open Sans", sans-serif;
+}
